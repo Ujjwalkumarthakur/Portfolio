@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>UjjwalKumar.portfolio</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">   <!--css link-->
+        <script src="index.js"></script>    <!--js file link-->
     </head>
     <body>
         <div id="header">
@@ -38,16 +39,30 @@
 
                         </p>
                          <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experiance</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
 
-                        <div class="tab-contents">
+                        <div class="tab-contents active-tab" id="skills">
                             <ul>
                                 <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                                 <li><span>Web Development</span><br>Web App Development</li>
                                 <li><span>App Develoment</span><br>designing android/ios app</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2013</span><br> Internship at OIBSIP  </li>
+                                <li><span>2021</span><br>Training at Hpcl biofuels Ltd <br>Electrical Engineering </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021</span><br>B.Tech in CSE <br>from NSEC Kolkata</li>
+                                <li><span>2018</span><br>Diploma in Electrical Engineering<br>from K.K.P Dhanbad</li>
                             </ul>
                         </div>
 
@@ -56,6 +71,18 @@
             </div>
         </div>
 
+
+
+        <!---services-->
+
+
+
+
+
+
+
+
+        
 
 
     </body>

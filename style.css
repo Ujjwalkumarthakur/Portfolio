@@ -155,3 +155,11 @@ width: 100%;
     color: #fff;
     font-size: 14px;
 }
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
