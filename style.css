@@ -5,6 +5,9 @@
     font-family: 'poppins',sans-serif;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
 background-color: #080808;
@@ -301,7 +304,7 @@ width: 100%;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
-    transition: background 0.5s;
+    transition:background 0.5s;
 
 }
 
@@ -383,3 +386,110 @@ form .btn2{
     margin-top: 20px;
 
 }
+nav .fa-solid{
+    display: none;
+}
+
+
+
+/* css for small screem */
+
+ @media only screen and (max-width: 600px){ 
+
+
+
+
+     nav .fa-solid{
+         display: block;
+         font-size: 25px;
+     }
+
+
+     #header{ 
+        display: block;
+        background-color: rgb(13, 8, 1);
+    }
+
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+
+    }
+
+
+    /* #sidemenu{
+        display: block;
+    } */
+     nav ul{
+         display: block;
+         background: #ff004f;
+         position: fixed;
+         top: 0;
+         right: -200px;
+         width: 200px;
+         height: 100vh;
+         padding-top: 50px;
+         z-index: 2;  
+         transition: right 0.5s;
+      
+    } 
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+     } 
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+ }
+
+ #msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+ }
+
+
+ 
+     

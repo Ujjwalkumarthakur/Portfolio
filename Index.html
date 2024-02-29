@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <title>UjjwalKumar.portfolio</title>
         <link rel="stylesheet" href="style.css">   <!--css link-->
         <script src="index.js"></script>    <!--js file link-->
@@ -11,14 +14,15 @@
             <div class="container">
                 <nav>
                     <img src="image/logo.jpg" class="logo">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul id="sidemenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Skills</a></li>
+                        <li><a href="#portfolio">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
-
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
                     <p>Developer</p>
@@ -167,12 +171,13 @@
                 <a href="image/UJJWAL_KUMAR-cv.pdf.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form action="">
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2"> submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
 
         </div>
@@ -181,6 +186,28 @@
         <p>Copyright @ Ujjwal Kumar</p>
     </div>
 </div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxG0Suk8BNLCYWzsK4g83UqRf8smfi-HmGttYtOOH99t3dgQH7ioegd08snMPogd57o/exec'
+
+    const form = document.forms['submit-to-google-sheet']
+     
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 
     </body>
