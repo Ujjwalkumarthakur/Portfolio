@@ -241,8 +241,12 @@ width: 100%;
     overflow: hidden;
 }
 
+.clone{
+    height: 360px;
+}
+
 .work img{
-    width: 100%;
+   width: 100%;
     border-radius: 10px;
     display: block;
     transition:transform 0.5s;
@@ -270,7 +274,12 @@ width: 100%;
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
+    color:black;
 
+}
+
+.layer p{
+    color:white;
 }
 
 .layer a{
